@@ -19,25 +19,20 @@ using namespace std;
  */
 int main() 
 {
-    int x, y;
-    
-   cout << "Whats your favorite letter in C? \n";
-   cin >> y;
-   y = x
-            
-    cout << "          x x x\n"
-           "        x\n"
-           "       x\n"
-           "      x\n"
-           "      x\n"
-           "      x\n"
-           "       x\n"
-           "        x\n        x\n"
-           "          x x x\n";
-    
-    cout << "Hope you enjoyed.\n";
-    cout << "Good-bye.\n";
-        
+   cout << "*************************************************\n"
+           "\n"
+           "          C C C             S S S S          !!\n"
+           "        C       C         S         S        !!\n"
+           "       C                 S                   !!\n"
+           "      C                   S                  !!\n"
+           "      C                     S S S S          !!\n"
+           "      C                            S         !!\n"
+           "       C                            S        !!\n"
+           "        C        C        S        S           \n"
+           "          C C C             S S S S          00\n"
+           "\n"
+           "*************************************************\n";
+   cout << "     Computer Science is Cool Stuff!!!\n";
     return 0;
 }
 
