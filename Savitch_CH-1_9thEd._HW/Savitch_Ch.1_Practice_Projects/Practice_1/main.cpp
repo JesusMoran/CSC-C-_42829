@@ -16,24 +16,24 @@ using namespace std;
 
 int main( )
  {
-    int number_of_pods, peas_per_pod, total_peas;
+    int pods, peas, totalP;
     
     cout << "Press return after entering a number:\n";
     cout << "Enter the number of peas in a pod:\n";
     
-    cin >> number_of_pods;
+    cin >> pods;
     
     cout << "Enter the number of peas in a pod:\n";
-    cin >> peas_per_pod;
-    total_peas = number_of_pods * peas_per_pod;
+    cin >> peas;
+    totalP = pods * pod;
     cout << "If you have ";
-    cout << number_of_pods;
+    cout << pods;
     cout << " pea pods\n";
     cout << "and ";
-    cout << peas_per_pod;
+    cout << pod;
     cout << " peas in each pod, then \n";
     cout << "you have ";
-    cout << total_peas;
+    cout << totalP;
     cout << " peas in all the pods. \n";
    
     return 0;

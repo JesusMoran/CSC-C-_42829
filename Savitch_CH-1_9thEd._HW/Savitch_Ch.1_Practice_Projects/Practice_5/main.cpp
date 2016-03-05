@@ -16,7 +16,7 @@ using namespace std;
 
 int main( )
  {
-    int width, hight, total_length;
+    int width, hight, totalL;
    
     cout << "Hello.\n";
     
@@ -27,7 +27,7 @@ int main( )
     
     cout << "Enter the hight of the fence:\n";
     cin >> hight;
-    total_length = width * hight;
+    totalL = width * hight;
     cout << "If you have a ";
     cout << width;
     cout << " feet wide fence\n";
@@ -35,7 +35,7 @@ int main( )
     cout << hight;
     cout << " feet high, then \n";
     cout << "you have ";
-    cout << total_length;
+    cout << totalL;
     cout << " total feet of fence. \n";
    
     cout << "Good-bye.\n";

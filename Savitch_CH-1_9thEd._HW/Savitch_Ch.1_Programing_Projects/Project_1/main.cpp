@@ -10,17 +10,23 @@
  *
  * Created on February 28, 2016, 3:10 PM
  */
-
+//System Libraries
 #include <iostream>
 using namespace std;
+//User libraries
 
+//Global Constant
+
+//Function Prototype
+
+//Execution begins here
 int main( )
 {
+//Declare Variables
     int roomP, roomA, length, width;
-/*roomP = Perimeter of the room
- *roomA = Area of the room
- * length and width are the sides of the room
- */ 
+
+     //Map the input to the output
+    
     
 //Calculates the total of the rooms perimeter and area
     
@@ -33,6 +39,7 @@ int main( )
 
     cout << "Now, enter the width of the room in feet: \n";
 
+    //Input values
     cin >> width;
     roomP = length + width;
     roomA = length * width;
@@ -42,9 +49,10 @@ int main( )
     cout << roomP ;
     cout << " feet.\n";
     
+    //Output results
     cout << "The total area of carpet needed in square feet is: \n";
     cout << roomA ;
-    cout << " feet.\n";
+    cout << " square feet.\n";
     
     cout << "An assistant will now show you our selection.\n";
     cout << "Thank you for choosing Flooring Pro's. \n";

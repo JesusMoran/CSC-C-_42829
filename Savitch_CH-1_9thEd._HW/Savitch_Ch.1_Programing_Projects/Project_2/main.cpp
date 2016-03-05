@@ -6,19 +6,29 @@
 
 /* 
  * File:   main.cpp
- * Author: Jesus E. Moran Riverside
+ * Author: Jesus E. Moran Rivera
  *
  * Created on February 28, 2016, 4:29 PM
  */
-
+//System Libraries
 #include <iostream>
 using namespace std;
+//User libraries
 
-/*
- * 
- */
+//Global Constant
+
+//Function Prototype
+
+//Execution begins here
 int main() 
 {
+//Declare Variables
+    
+//Map the input to the output
+    
+//Input values
+    
+//Output results
    cout << "*************************************************\n"
            "\n"
            "          C C C             S S S S          !!\n"
@@ -33,6 +43,8 @@ int main()
            "\n"
            "*************************************************\n";
    cout << "     Computer Science is Cool Stuff!!!\n";
-    return 0;
+   
+   //End
+   return 0;
 }
 

@@ -10,19 +10,23 @@
  *
  * Created on February 28, 2016, 6:04 PM
  */
-
+//System Libraries
 #include <iostream>
 using namespace std;
+//User libraries
 
-/*
- * 
- */
+//Global Constant
+
+//Function Prototype
+
+//Execution begins here
 int main() 
 {
-//Variables
+//Declare variables
     int dis, acc, sec;
+//Map the input to the output
     
-    //Projects starts here
+//Input values
     cout << "Welcome to Newton labs. Home of gravitational studies.\n";
     cout << "Please choose an object and throw it in the air.\n";
     cout << "How long did it take for the object to fall in seconds?\n";
@@ -36,7 +40,7 @@ int main()
     acc = 32;
     dis = acc * (sec * sec)/2;
     
-   //Result
+ //Output results
     cout << "The total distance the object can traveled is: ";
     cout << dis << " ft/sec.\n";
     

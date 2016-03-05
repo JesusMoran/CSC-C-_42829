@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Practice_1
+PROJECTNAME=Google_tax
 
 # Active Configuration
 DEFAULTCONF=Debug

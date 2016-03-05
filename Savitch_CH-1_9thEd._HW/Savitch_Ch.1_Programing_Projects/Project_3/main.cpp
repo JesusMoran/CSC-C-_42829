@@ -10,19 +10,25 @@
  *
  * Created on February 28, 2016, 4:54 PM
  */
-
+//System Libraries
 #include <iostream>
+#include <iomanip>
 using namespace std;
+//User libraries
 
-/* 
- * 
- */
+//Global Constant
+
+//Function Prototype
+
+//Execution begins here
 int main( ) 
 {   
-// Variables
+//Declare variables
     float total, quarter, dime, nickel;
-
-// Program starts
+    
+//Map the input to the output
+    
+//Input values
     cout << "Welcome.\n";
     cout << "Please enter the number of quarters in the register: \n";
     cin >> quarter; //First input
@@ -33,12 +39,10 @@ int main( )
     cout << "Please enter the number of nickels: \n";
     cin >> nickel;  //Third input
     
-    //Math formula for program
+   //Output results
     total = (quarter * .25) + (dime * .10) + (nickel * .05);
-    
-// Total output in dollars
-    cout << "Your total is:$ ";
-    cout << total;
+    cout<<fixed<<showpoint<< setprecision(2)<< "Your total is:$ "<< total<<endl;
+
     //End.
     return 0;
 }
