@@ -26,25 +26,31 @@ int main(int argc, char** argv) {
     //Declare Variables
     int weight, hight, bmi;
     
+    //Input current weight
     cout<<"Enter your current weight in pounds: \n";
     cin>>weight;
     
+    //Input current hight
     cout<<"Enter current height in inches: \n";
     cin>>hight;
     
+    //Calculation for BMI
     bmi=weight * 704 / (hight*hight);
     
+    //Output of BMI
     cout<<fixed<<setprecision(0)<<"Your BMI is "<<bmi<<"."<<endl;
     
+    //Filter outputs BMI and if its Under, Over, Optimal
     if (bmi>=18.5&&bmi<=25)
         cout<<"You are at Optimum for your weight."<<endl;
-     if (bmi<18.5)
+    else if (bmi<18.5)
         cout<<"Carful, you are underweight."<<endl;
-         if (bmi>25)
+    else if (bmi>25)
              cout<<"Careful, you are overweight."<<endl;
                else
                   cout<<"Error. Invalid value, try again."<<endl;
-                
+   
+    //Fin
     return 0;
 }
 

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
  * Author: Jesus E. Moran Rivera
@@ -31,30 +25,43 @@ int main(int argc, char** argv) {
     if (num<1||num>10)
         cout<<"Retry and enter a valid number."<<endl;
     else
-        cout<<"The number you entered is "<<num<<"or Roman numeral:"<<endl;
+        cout<<"The number you entered is "<<num<<" or Roman numeral:"<<endl;
     
     switch(num){
             
-        case 1:cout<<"I \n";
+        case 1:{cout<<"I \n";
             break;
-        case 2:cout<<"II \n";
+        }
+        case 2:{cout<<"II \n";
             break;
-        case 3:cout<<"III \n";
+        }
+        case 3:{cout<<"III \n";
             break;
-        case 4:cout<<"IV \n";
+        }
+        case 4:{cout<<"IV \n";
             break;
-        case 5:cout<<"V \n";
+        }
+        case 5:{cout<<"V \n";
             break;
-        case 6:cout<<"VI \n";
+        }
+        case 6:{cout<<"VI \n";
             break;
-        case 7:cout<<"VII \n";
+        }
+        case 7:{cout<<"VII \n";
             break;
-        case 8:cout<<"VIII \n";
+        }
+        case 8:{cout<<"VIII \n";
             break;
-        case 9:cout<<"XI \n";
+        }
+        case 9:{cout<<"XI \n";
             break;
-        case 10:cout<<"X \n";
-}   
+        }
+        case 10:{cout<<"X \n";
+            break;
+        }
+              default:{
+                  cout<<"Error. Try again."<<endl;
+              }
+};
     return 0;
 }
-

@@ -23,24 +23,25 @@ using namespace std;
 
 int main(int argc, char** argv) {
     //Declare Variables
-char color, color2, red, blue, yellow;
+int color, color2, red=1, blue=2, yellow=3;
     
+    cout<<"Enter the number 1 for Red, 2 for blue, and 3 for yellow."<<endl;
     cout<<"Enter the first primary color in all lowercase to be mixed:"<<endl;
     cin>>color;
     cout<<"Enter the next primary color in all lowercase to be mixed:"<<endl;
     cin>>color2;
     
-    if(color==red&&color2==blue)
+    if(color==1&&color2==2)
         cout<<"You've made violet"<<endl;
-    if(color==red&&color2==yellow)
+    else if(color==1&&color2==3)
         cout<<"You've made orange"<<endl;
-    if(color==blue&&color2==red)
+    else if(color==2&&color2==1)
         cout<<"You've made violet"<<endl;
-    if(color==blue&&color2==yellow)
+    else if(color==2&&color2==3)
         cout<<"You've made green"<<endl;
-    if(color==yellow&&color2==red)
+    else if(color==3&&color2==1)
         cout<<"You've made orange"<<endl;
-    if(color==yellow&&color2==blue)
+    else if(color==3&&color2==2)
         cout<<"You've made green"<<endl;
     else
         cout<<"You've entered the wrong color(s), try again."<<endl;

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
  * Author: Your Name <Jesus E. Moran Rivera>
@@ -24,8 +18,11 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare Variables
     int day, month, year, total;
+    
+    //Calculation for month time year
     total=month*day;
     
+    //Input for the day, month, and year.
     cout<<"Enter a the number of a day: \n";
     cin>>day;
     cout<<"Enter a month in two digit form: \n";
@@ -33,12 +30,13 @@ int main(int argc, char** argv) {
     cout<<"Enter the year in two digit format:"<<endl;
     cin>>year;
     
+    //Compares the calculation of the day and month to the year
     if (year=total)
         cout<<"The year you picked is magical!!!"<<endl;
      else
         cout<<"The year is not magical. =("<<endl;
     
-            
+    //Fin        
     return 0;
 }
 
