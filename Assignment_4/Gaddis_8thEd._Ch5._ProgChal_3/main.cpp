@@ -6,6 +6,7 @@
  */
 //System Libraries
 #include <iostream>
+#include <iomanip>
 using namespace std;
 //User Libraries
 
@@ -17,7 +18,17 @@ using namespace std;
 
 int main(int argc, char** argv) {
     //Declare Variables
-
+    float seaLvl=1.5, years, total;
+    
+    cout<<"This program shows the total rise of the sea levels each year."<<endl;
+    cout<<"Year       Total"<<endl;
+    
+    for(years=1; years<=25; years++)
+        {
+            total= seaLvl*years;
+            cout<<years<<setw(15)<<total<<"mm"<<endl;
+        }
+    
     return 0;
 }
 

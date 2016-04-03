@@ -17,19 +17,7 @@ using namespace std;
 
 int main(int argc, char** argv) {
     //Declare Variables
-    char ascii;
-    int num;
-    
-    cout<<"The following displays the ASCII character for codes 0 to 127."<<endl;
-    
-   for
-    (num=0;num<=127;num++)
-   {
-       if (num%16 ==0)
-           cout<<endl;
-       ascii++;
-    cout<<ascii<<"  ";
-   }
+
     return 0;
 }
 

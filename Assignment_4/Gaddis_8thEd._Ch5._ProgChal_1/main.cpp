@@ -17,7 +17,19 @@ using namespace std;
 
 int main(int argc, char** argv) {
     //Declare Variables
-
+    int pNum, total, num;
+    
+    cout<<"Please enter valid positive number from 1 to 50: "<<endl;
+    cin>>pNum;
+    
+    if (pNum<0||pNum>50)
+        cout<<"Error. Please restart and enter a valid positive number!"<<endl;
+    else
+        for (num=1; num<=pNum; num++ )
+        {
+         total+=num;  
+        }
+    cout<<"The sum of all integers from 1 to "<<pNum<<" is: "<<total<<endl;
     return 0;
 }
 

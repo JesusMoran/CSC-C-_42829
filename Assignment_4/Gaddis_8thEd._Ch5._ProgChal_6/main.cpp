@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
  * Author: Your Name <Jesus E. Moran Rivera>
@@ -12,6 +6,7 @@
  */
 //System Libraries
 #include <iostream>
+#include <iomanip>
 using namespace std;
 //User Libraries
 
@@ -23,7 +18,22 @@ using namespace std;
 
 int main(int argc, char** argv) {
     //Declare Variables
-
+    int speed, time, iTime, dist;
+    
+    cout<<"How fast is the vehicle going in miles per hour?"<<endl;
+    cin>>speed;
+    cout<<"How many hours has it traveled?"<<endl;
+    cin>>iTime;
+    
+    cout<<"Time   Distance"<<endl;
+    
+    for(time=1;time<=iTime;time++)
+    {
+        dist=time*speed;
+    
+    cout<<time<<setw(10)<<dist<<endl;
+    }
+    
     return 0;
 }
 
