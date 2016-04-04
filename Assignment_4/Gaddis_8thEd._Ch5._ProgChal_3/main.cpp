@@ -20,15 +20,20 @@ int main(int argc, char** argv) {
     //Declare Variables
     float seaLvl=1.5, years, total;
     
+    //Purpose of the program
     cout<<"This program shows the total rise of the sea levels each year."<<endl;
     cout<<"Year       Total"<<endl;
     
+    //For loop that calculates the total rise of the sea level
     for(years=1; years<=25; years++)
         {
             total= seaLvl*years;
+            
+            //Outputs of the rise each year
             cout<<years<<setw(15)<<total<<"mm"<<endl;
         }
     
+    //Fin
     return 0;
 }
 
