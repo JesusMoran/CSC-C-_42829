@@ -76,6 +76,7 @@ int main(int argc, char** argv) {
                 //Output of the characters
                 cout<<ascii<<"  ";
                }
+                cout<<endl;
                 cout<<"*********************************************"
                         "*******************************************"<<endl;
               break;
@@ -86,7 +87,7 @@ int main(int argc, char** argv) {
 
                 //Purpose of the program
                 cout<<"This program shows the total rise of the sea "
-                        "levels each year."<<endl;
+                        "levels each year for up to 25 years."<<endl;
                 cout<<"Year       Total"<<endl;
 
                 //For loop that calculates the total rise of the sea level
@@ -330,6 +331,6 @@ int main(int argc, char** argv) {
       }
     }while(choice>0&&choice<11);
     
+    //Fin
     return 0;
 }
-

@@ -21,7 +21,8 @@ int main(int argc, char** argv) {
     float seaLvl=1.5, years, total;
     
     //Purpose of the program
-    cout<<"This program shows the total rise of the sea levels each year."<<endl;
+    cout<<"This program shows the total rise of the "
+            "sea levels each year 25 years."<<endl;
     cout<<"Year       Total"<<endl;
     
     //For loop that calculates the total rise of the sea level
