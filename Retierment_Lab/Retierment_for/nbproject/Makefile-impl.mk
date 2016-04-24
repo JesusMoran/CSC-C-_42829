@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Retierment
+PROJECTNAME=Retierment_for
 
 # Active Configuration
 DEFAULTCONF=Debug
