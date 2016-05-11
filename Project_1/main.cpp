@@ -19,20 +19,35 @@ using namespace std;
 //Function Prototype
 void start(unsigned short);
 void endGame(unsigned short, int);
+void grading(char);
 
 //Execution Begins Here
 
 int main(int argc, char** argv) {
     //Declare Variables
     unsigned short lane;
+    char grade;
     
     ifstream in;
     
+    //Initial instructions for playing
     cout<<"Use the number keys to move the car and press enter after each input. \n"
            "Use 1 to 4 and press any other key to exit."<<endl<<endl;
     
+    //Calls the game
     start(lane);
-            
+    
+    cout<<endl;
+    
+    //Grading prompt
+    cout<<"Please take some time to grade the Project."<<endl<<endl;
+    
+    cout<<"Please place a letter grade in caps:"<<endl;
+    cin>>grade;
+    
+    //Calls the grading scale
+    grading(grade);
+    
     return 0;
 }
 /*******************************************************************************
@@ -54,13 +69,15 @@ void start(unsigned short lane)
         } 
     //Places "car" on the grid if it is above -1
     lane=0;
-    while(live>0){
+    
+    //Do-while loop runs the program as long as the player has lives
+    do{
         
         //Keeps track of lives for the player
         cout<<"Lives: "<<live<<endl;
         
         //Changes lanes for the player
-        cout<<"Chose a lane:"<<endl;
+        cout<<"Pick a lane:"<<endl;
         cin>>lane;
         
         //Verifies that the inputs are in the lane range
@@ -85,6 +102,7 @@ void start(unsigned short lane)
             for(x=0;x<SIZE;x++){
              grid[x][29]='_';  
             }
+            
             //Places car in the selected lane
             grid[lane][29]='<';
             
@@ -100,6 +118,8 @@ void start(unsigned short lane)
                     }
                 }
             }
+            
+            //Outputs grid
             for (x=0;x<SIZE;x++){
                 for (y=0;y<LENGTH;y++){
                  cout<<grid[x][y]; 
@@ -109,7 +129,10 @@ void start(unsigned short lane)
         //Else statement if input is above or below the lanes
         }else
               cout<<"Stay in the lane!!!"<<endl;
-    }
+        
+    }while(live>0);
+    
+    //If statement calls the endGame function for the scoreboard
     if (live<1)
         endGame(live, score);
 }
@@ -117,17 +140,21 @@ void start(unsigned short lane)
 *******************************************************************************/
 void endGame(unsigned short live, int score)
 {
+    //Declare Variables
     const short PLACE=10;
     char name[PLACE];
     
+        //Outputs the game over
         cout<<"Game Over!!!"<<endl<<endl;
         
+        //Asks for a player name to input into scoreboard
         cout<<"Enter your name: (max of 10 characters)\n";
         cin>>name;
         
         cout<<endl;
         
-        cout<<"Name        Score"<<endl;
+        //Outputs score at the end of the game
+        cout<<"Name       Score"<<endl;
         cout<<name<<setw(13)<<score<<endl;   
         
         ofstream out;
@@ -137,6 +164,45 @@ void endGame(unsigned short live, int score)
         out<<"\r\n"<<name<<setw(13)<<score<<endl;
         
         out.close();
+}
+/*******************************************************************************
+*******************************************************************************/
+void grading(char grade)
+{   
+    ofstream out;
+    
+    //Switch statement for grading
+    switch (grade){
+        case 'A':{
+            cout<<"Thank you very much!!!"<<endl;
+                break;
+        }
+        case 'B':{
+            cout<<"Thanks, I will work on the project some more."<<endl;
+                break;
+        }
+        case 'C':{
+            cout<<"I appreciate the input and will work on this."<<endl;
+                break;
+        }
+        case 'D':{
+            cout<<"Well, i need to do better. Thanks."<<endl;
+                break;
+        }
+        case 'F':{
+            cout<<"I'll hit the books right away."<<endl;
+                break;
+        }
+        default:{
+            cout<<"Enter a valid letter grade or use capitols."<<endl;
+        }
+    }
+    
+    //Outputs grade to a file
+    out.open("Grade.dat",ios::app);
+    out<<"\r\n"<<grade<<endl;
+    
+    out.close();    
 }
 /*******************************************************************************
 *******************************************************************************/
