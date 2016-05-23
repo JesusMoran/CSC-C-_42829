@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
- * Author: Your Name <Jesus E. Moran Rivera>
+ * Author: Jesus E. Moran Rivera
  *
  * Created on May 9, 2016, 9:48 AM
  */
+
 //System Libraries
 #include <iostream>
 using namespace std;
@@ -19,7 +14,7 @@ using namespace std;
 
 //Function Prototype
 void input();
-void output(int [], int);
+void output(int [], const int);
 
 //Execution Begins Here
 
@@ -44,17 +39,25 @@ void input()
 
     }while(num<10); 
     
-    output(value, num);
+    output(value, NUM_VAL);
 }
 /*******************************************************************************
 *******************************************************************************/
-void output(int value[], int num)
+void output(int value[], const int NUM_VAL)
 {
     int count;
+    int small=value[0];
+    int big=0;
     
-    num=0;
-    
-    do{
+        for (count=0;count<10;count++)
+            if (value[count]<small)
+                small=value[count];
         
-    }while(count<10);
+        cout<<"The smallest number is: "<<small<<endl;
+        
+        for (count=0;count<10;count++)
+            if (value[count]>big)
+                big=value[count];
+        
+        cout<<"The largest number is: "<<big<<endl;
 }
