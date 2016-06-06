@@ -113,8 +113,8 @@ void start(unsigned short lane)
                        if(grid[x][y]==']'){
                            grid[x][y+1]=grid[x][y];
                            grid[x][y]='_';
-                           y++;
                         }
+                       y++;
                     }
                 }
             }

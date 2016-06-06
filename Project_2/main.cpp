@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Jesus E. Moran Rivera
  *
- * Created on April 24, 2016, 5:47 AM
+ * Created on June 05, 2016, 8:06 PM
  */
 //System Libraries
 #include <iostream>
@@ -57,7 +57,7 @@ void start(unsigned short lane)
     //Declare Variables
     const int SIZE=5, LENGTH=30;
     char grid[SIZE][LENGTH]; 
-    unsigned short x, y, i, live=3, score=0;
+    unsigned short x, y, i, live=3, score=0, level=0;
     bool crash=false;
   
     //Generates initial map of 5 by 30
@@ -84,20 +84,49 @@ void start(unsigned short lane)
         if(lane>=1&&lane<=4){
             
             //If player hits a block they lose a live
-            if(grid[lane][28]==']'){ 
+            if(grid[lane][28]==']'||grid[lane][28]=='}'||grid[lane][28]==')'||
+                    grid[lane][28]=='|'){ 
                crash=true;
                live-=1;
             }
+            //Else if player avoids obstacles it adds 100 points
             else{
-                 score+=10;
+                   score+=100;
+                   
+                   //Every 1000 points the level is increased
+                   if(score==1000){
+                       level=2;
+                   }
+                   if(score==2000){
+                       level=3;
+                   }
+                   if(score==3000){
+                       level=4;
+                   }
+                   if(score==4000){
+                       level=5;
+                   }
+                   
+                   //Outputs current score and level
+                   cout<<"Score: "<<score<<endl;
+                   cout<<"Level: "<<level<<endl;
             }
             
             //Random lane selection for Obstacles
-            srand(static_cast<unsigned int>(time(0)));
+            srand(static_cast<int>(time(0)));
             i=rand()%5+1;
-
+            
             //Places obstacle once a lane is picked
             grid[i][0]=']';
+            grid[i][0]='|';
+            //Place an obstacle on the same lane as player
+            grid[lane][0]='}';
+            
+            //Places obstacles on the lanes above and below the player
+            if(lane>1&&lane<4){
+            grid[lane-1][0]=')';
+            grid[lane+1][0]=')';
+            }
             
             for(x=0;x<SIZE;x++){
              grid[x][29]='_';  
@@ -109,8 +138,53 @@ void start(unsigned short lane)
             //Places obstacle and moves it across the grid once a new one spawns
             for (x=0;x<SIZE;x++){
                 for (y=0;y<LENGTH;y++){
-                   if(y<29){
+                   if(y<=29){
                        if(grid[x][y]==']'){
+                           grid[x][y+1]=grid[x][y];
+                           grid[x][y]='_';
+                           y++;
+                        }
+                    }
+                }
+            }
+            
+            //At level 2 the obstacle is added
+            if(level>=2)
+            //Places obstacle and moves it across the grid once a new one spawns
+            for (x=0;x<SIZE;x++){
+                for (y=0;y<LENGTH;y++){
+                   if(y<=29){
+                       if(grid[x][y]=='}'){
+                           grid[x][y+1]=grid[x][y];
+                           grid[x][y]='_';
+                           y++;
+                        }
+                    }
+                }
+            }
+            
+            //At level 3 the obstacle is added
+            if(level>=3)
+            //Places obstacle and moves it across the grid once a new one spawns
+            for (x=0;x<SIZE;x++){
+                for (y=0;y<LENGTH;y++){
+                   if(y<=29){
+                       if(grid[x][y]==')'){
+                           grid[x][y+1]=grid[x][y];
+                           grid[x][y]='_';
+                           y++;
+                        }
+                    }
+                }
+            }
+            
+            //At level 4 the obstacle is added
+            if(level>=4)
+            //Places obstacle and moves it across the grid once a new one spawns
+            for (x=0;x<SIZE;x++){
+                for (y=0;y<LENGTH;y++){
+                   if(y<29){
+                       if(grid[x][y]=='|'){
                            grid[x][y+1]=grid[x][y];
                            grid[x][y]='_';
                            y++;
